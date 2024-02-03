@@ -1,0 +1,85 @@
+* { user-select: none; }
+
+.center {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-right: -50%;
+}
+
+.police-container {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: url("https://cdn.discordapp.com/attachments/1020756092931805225/1198730575184408677/Background.png?ex=65bff7d8&is=65ad82d8&hm=e260a4e46571255e399621df57fed99d89adc6adf0e18a2887b966bd054eb82a&");
+
+    color:white;
+    font-family: Montserrat;
+}
+
+.police-container > .police-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    width: 62%;
+    height: 58%;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.police-container > .police-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.police-container > .police-wrapper > section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    column-gap: -50px;
+    row-gap: 75px;
+
+    padding: 50px;
+}
+
+.police-container > .police-wrapper > section > .police-object {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    border: 5px solid #333333;
+
+    width: 176.958px;
+    height: 176.958px;
+    transform: rotate(-45deg);
+    border-radius: 0px 35px;
+    background: radial-gradient(131.85% 131.85% at 91.29% 8.65%, #05B7DE 0%, #00313C 100%);
+    box-shadow: 0px 4px 106.2px 28px rgba(0, 0, 0, 0.51) inset;
+}
+
+.police-container > .police-wrapper > section > .police-object:hover {
+    background: rgba(72, 255, 244, 0.20);
+    box-shadow: 0px 4px 106.2px 28px rgba(0, 0, 0, 0.51) inset;
+    transition: .33s;
+}
+
+.police-container > .police-wrapper > section > .police-object > div {
+    transform: rotate(45deg);
+
+    text-shadow: 0px 0px 105.9px rgba(0, 0, 0, 0.25);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 800;
+
+    background: radial-gradient(133.45% 104.18% at 50% 50%, #FFF 0%, #848484 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

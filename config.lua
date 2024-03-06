@@ -1,6 +1,6 @@
 config = {}
 
-config.debug = true
+config.debug = false
 config.command = 'polmenu' -- EDIT THIS TO CHANGE THE COMMAND NAME
 config.removeCommand = 'axremove'
 config.removeThreadTimeout = 30 -- in seconds

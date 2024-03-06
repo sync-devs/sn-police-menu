@@ -203,6 +203,7 @@ RegisterNetEvent('ax:client:giveRemoveAccess',function ()
                     DrawMarker(0, (propCoords + vector3(0.0, 0.0, 1.7)), 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5, 0.5, 0.5, 255, 255, 0, 50, true, true, 2, nil, nil, false)
                     if IsControlJustPressed(0, 38) then
                         DeleteEntity(v.prop)
+                        TriggerServerEvent('ax:server:removeProp', v.position)
                         table.remove(createdProps, k)
                         hasRemoved = true
                     end

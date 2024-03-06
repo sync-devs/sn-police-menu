@@ -13,6 +13,18 @@ local debug <const> = function(...)
   end
 end
 ------------------------------------------------------
+local props = {}
+
+local findProp <const> = function (position)
+  for index,v in pairs(props) do
+    if #(v.position - position) < 0.1 then
+      table.remove(props, index)
+      return true
+    end
+  end
+
+  return false
+end
 
 RegisterCommand(config.command, function(source)
   if config.hasAccess() then
@@ -22,13 +34,20 @@ RegisterCommand(config.command, function(source)
   end
 end)
 
-local props = {}
 
 RegisterNetEvent('ax:server:addProp',function (propData)
   if type(propData) ~= 'table' then return end
 
   props[#props+1] = propData
   TriggerClientEvent('ax:client:syncProps', -1, props)
+end)
+
+RegisterNetEvent('ax:server:removeProp',function (propCoords)
+  if findProp(propCoords) then
+    TriggerClientEvent('ax:client:syncProps', -1, props)
+  elseif config.debug then
+    print("Unknown prop at coords: "..propCoords)
+  end
 end)
 
 RegisterCommand(config.removeCommand,function (source)

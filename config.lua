@@ -1,6 +1,6 @@
 config = {}
 
-config.debug = false
+config.debug = true
 config.command = 'polmenu' -- EDIT THIS TO CHANGE THE COMMAND NAME
 config.removeCommand = 'axremove'
 config.removeThreadTimeout = 30 -- in seconds
@@ -16,7 +16,7 @@ config.spikesCode = "p_ld_stinger_s"
 
 -- EDIT THIS LIST TO ADD OR REMOVE PROPS
 config.props = {
-    ["prop_roadcone01a"] = "Cone 1",
+    ["prop_roadcone01a"]     = "Cone 1",
     ["prop_barrier_work04a"] = "Barrier 1",
     ["prop_barrier_work01a"] = "Barrier 2",
     ["prop_barrier_work06a"] = "Barrier 3",
@@ -24,7 +24,7 @@ config.props = {
 }
 config.rotationSpeed = 2.0 -- EDIT THIS TO CHANGE THE ROTATION SPEED OF THE PROPS
 config.disableAiming = true -- EDIT THIS TO DISABLE AIMING WHILE PLACING PROPS
-config.placeMessage = "You have placed a prop. Go near it and press E to remove it." -- EDIT THIS TO CHANGE THE MESSAGE THAT APPEARS WHEN YOU PLACE A PROP
+config.placeMessage = "You have placed a prop. Use /"..config.removeCommand..", go near it and press E to remove it." -- EDIT THIS TO CHANGE THE MESSAGE THAT APPEARS WHEN YOU PLACE A PROP
 
 -- EDIT THIS TO CHANGE THE BUTTONS TEXT AND KEYBINDS
 config.buttons = {
